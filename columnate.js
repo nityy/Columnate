@@ -1,6 +1,3 @@
-// function Columnate() { var LoadStylesheet = function (url) { var c = document.createElement("link"); c.rel = "stylesheet", c.type = "text/css", c.media = "all", c.href = url, document.getElementsByTagName("head")[0].appendChild(c) }, MakeReadable = function () { var doclone = document.cloneNode(!0), article = new Readability(doclone).parse(), htmltag = document.getElementsByTagName("html")[0]; htmltag.removeAttribute("class"), htmltag.removeAttribute("style"), document.head.innerHTML = `<meta name="viewport" content="width=device-width, initial-scale=1">`, LoadStylesheet("//nityy.github.io/notColumnate/appearance.css"), document.title = article.title, document.body.removeAttribute("class"), document.body.removeAttribute("style"), document.body.innerHTML = "<h1>" + article.title + "</h1><div id=\"author\">" + article.byline + "</div><hr>" + article.content }; cmjs = document.createElement("script"), cmjs.type = "text/javascript", cmjs.src = "//nityy.github.io/notColumnate/readability/Readability.js", cmjs.onreadystatechange = MakeReadable, cmjs.onload = MakeReadable, document.getElementsByTagName("head")[0].appendChild(cmjs) }
-
-
 function Columnate() {
   // apply columnate stylesheets to document
   var LoadStylesheet = function (url) {
