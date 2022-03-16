@@ -12,11 +12,6 @@ body {
 
 	margin: 0;
 	padding: 0;
-	
-	column-fill: auto;
-	column-width: 20em;
-	column-count: auto;
-	column-gap: 1.5em;
 }
 
 figure {
