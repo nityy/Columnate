@@ -1,12 +1,14 @@
 <html>
+
 <head>
-    <title>Columnate</title>
+    <title>notColumnate</title>
     <style type="text/css">
         body {
             font-family: sans-serif;
             font-size: large;
             margin: 30px;
         }
+
         .ready {
             border: 1px solid blue;
             padding: 6px;
@@ -14,20 +16,11 @@
             background: #eef;
         }
     </style>
-    <script type="text/javascript" src="uglifyjs.js"></script>
     <script type="text/javascript" src="columnate.js"></script>
     <script>
-        
+
         function CreateLink() {
-
-            // cribbed from bookmarkletify
-            var toplevel_ast = UglifyJS.parse(Columnate.toString() + "Columnate();");
-            toplevel_ast.figure_out_scope();
-            var compressor = UglifyJS.Compressor();
-            var compressed_ast = toplevel_ast.transform(compressor);
-            compressed_ast.figure_out_scope();
-
-            var url = "javascript: (function () {" + compressed_ast.print_to_string() + "}())";
+            var url = "javascript: (function () {" + Columnate.toString() + "Columnate();}())";
             document.getElementById("bookmarkletLink").href = url;
             document.getElementById("bookmarkletLink").className = "ready";
         };
@@ -39,18 +32,22 @@
     </script>
 
 </head>
+
 <body onload="CreateLink();">
 
-<h1>Columnate</h1>
+    <h1>notColumnate</h1>
 
-<p>Drag this link to your bookmarks bar to install:</p>
+    <p>Drag this link to your bookmarks bar to install:</p>
 
-<p><strong><a href="#" id="bookmarkletLink" onclick="return ClickHelp();" title="Drag this link to your bookmark bar.">Columnate</a></strong></p>
+    <p><strong><a href="#" id="bookmarkletLink" onclick="return ClickHelp();"
+                title="Drag this link to your bookmark bar.">notColumnate</a></strong></p>
 
-<p>Now find a web page with a long article. Click the <strong>Columnate</strong> bookmarklet to reformat the page free of distractions. The article will be formatted in narrow columns like a newspaper.</p>
+    <p>Now find a web page with a long article. Click the <strong>notColumnate</strong> bookmarklet to reformat the page
+        free of distractions.</p>
 
-<p>Visit the <a href="https://github.com/anoved/Columnate">Columnate project page</a> for more information or to report <a href="https://github.com/anoved/Columnate/issues">issues</a>.</p>
+    <p>Visit the original <a href="https://github.com/anoved/Columnate">Columnate project page</a>. Visit this fork's <a
+            href="https://github.com/nityy/notColumnate/">page</a>.</p>
 
 </body>
-</html>
 
+</html>
