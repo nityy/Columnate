@@ -12,6 +12,11 @@ body > h1 {
 	font-size: 1.6em;
 }
 
+#author {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
 figcaption {
     color: #777;
 }
@@ -21,9 +26,8 @@ figure {
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, figcaption {
+h1, h2, h3, h4, h5, h6, p, figcaption, #author {
 	padding-top: 16px;
-	padding-left: 16px;
 	margin-block-start: 0;
 	margin-block-end: 0;
 	margin-inline-start: 0;
