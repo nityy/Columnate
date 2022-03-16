@@ -16,11 +16,20 @@
             background: #eef;
         }
     </style>
+    <script type="text/javascript" src="uglifyjs.js"></script>
     <script type="text/javascript" src="columnate.js"></script>
     <script>
 
         function CreateLink() {
-            var url = "javascript: (function () {" + Columnate.toString() + "Columnate();}())";
+
+            // cribbed from bookmarkletify
+            var toplevel_ast = UglifyJS.parse(Columnate.toString() + "Columnate();");
+            toplevel_ast.figure_out_scope();
+            var compressor = UglifyJS.Compressor();
+            var compressed_ast = toplevel_ast.transform(compressor);
+            compressed_ast.figure_out_scope();
+
+            var url = "javascript: (function () {" + compressed_ast.print_to_string() + "}())";
             document.getElementById("bookmarkletLink").href = url;
             document.getElementById("bookmarkletLink").className = "ready";
         };
@@ -29,18 +38,21 @@
             alert("Drag this link to your bookmark bar.");
             return false;
         };
+
+        document.querySelector("body").onload = CreateLink();
+        document.getElementById("bookmarkletLink").onclick = ClickHelp();
     </script>
 
 </head>
 
-<body onload="CreateLink();">
+<body>
 
     <h1>notColumnate</h1>
 
     <p>Drag this link to your bookmarks bar to install:</p>
 
-    <p><strong><a href="#" id="bookmarkletLink" onclick="return ClickHelp();"
-                title="Drag this link to your bookmark bar.">notColumnate</a></strong></p>
+    <p><strong><a href="#" id="bookmarkletLink" title="Drag this link to your bookmark bar.">notColumnate</a></strong>
+    </p>
 
     <p>Now find a web page with a long article. Click the <strong>notColumnate</strong> bookmarklet to reformat the page
         free of distractions.</p>
