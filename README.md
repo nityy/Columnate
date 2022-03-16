@@ -1,18 +1,20 @@
-# Columnate
+# Unclutter
 
-Bookmarklet for multicolumn reader mode.
+Bookmarklet for reader mode.
+This fork is intended to reformat the page like firefox's reader view. If you want newspaper-style multicolumns, you can visit the [original project](github.com/anoved/Columnate).
 
 ## Installation
 
-Visit [anoved.github.io/Columnate](https://anoved.github.io/Columnate/) and drag the **Columnate** link to your bookmarks bar to install.
+Visit [nityy.github.io/Unclutter](https://nityy.github.io/Unclutter/) and drag the **Unclutter** link to your bookmarks bar to install.
 
 ## Usage
 
-Find a web page with a long article. Click the **Columnate** bookmarklet to reformat the page free of distractions. The article will be formatted in narrow columns like a newspaper.
+Find a web page with a long article. Click the **Unclutter** bookmarklet to reformat the page free of distractions.
 
 ## Acknowledgements
 
-Columnate uses [Mozilla Readability](https://github.com/mozilla/readability). Columnate is a simplified rewrite of my earlier effort [McReadability](https://github.com/anoved/mcreadability), which was based on a now-obselete predecessor of Mozilla Readability. Bookmarklet creation is modelled after [Bookmarkletify](https://martijnbrekelmans.com/bookmarkletify/) by Martijn Brekelmans.
+Thanks to anoved for their [Columnate project](https://github.com/anoved/Columnate).
+This project uses [Mozilla Readability](https://github.com/mozilla/readability). Bookmarklet creation is modelled after [Bookmarkletify](https://martijnbrekelmans.com/bookmarkletify/) by Martijn Brekelmans.
 
 ## License
 

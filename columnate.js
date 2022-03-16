@@ -19,7 +19,7 @@ function Columnate() {
     htmltag.removeAttribute("style");
     // reset head to nothing but our stylesheets
     document.head.innerHTML = '<meta name="viewport" content="width=device-width, initial-scale=1">';
-    LoadStylesheet('//nityy.github.io/notColumnate/appearance.css');
+    LoadStylesheet('//nityy.github.io/Unclutter/appearance.css');
     document.title = article.title;
     // reset body html to nothing but reformatted content  
     document.body.removeAttribute("class");
@@ -30,7 +30,7 @@ function Columnate() {
   // load readability script and set it to be applied when loaded
   cmjs = document.createElement('script');
   cmjs.type = 'text/javascript';
-  cmjs.src = '//nityy.github.io/notColumnate/readability/Readability.js';
+  cmjs.src = '//nityy.github.io/Unclutter/readability/Readability.js';
   cmjs.onreadystatechange = MakeReadable;
   cmjs.onload = MakeReadable;
   document.getElementsByTagName('head')[0].appendChild(cmjs);
