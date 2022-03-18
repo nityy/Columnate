@@ -1,11 +1,11 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    background: #fbfbfb;
-    color: #080000;
-    font-size: 20px;
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    background: #f7f1e2;
+    color: #30241c;
+    font-size: 18px;
     max-width: 30em;
 	margin: auto;
-	padding: 60px 25px 0px 25px;
+	padding: 3em 1.25em 0px 1.25em !important;
 }
 
 body > h1 {
@@ -27,7 +27,7 @@ figure {
 }
 
 h1, h2, h3, h4, h5, h6, p, figcaption, #author {
-	padding-top: 16px;
+	padding-top: 1.3em;
 	margin-block-start: 0;
 	margin-block-end: 0;
 	margin-inline-start: 0;
